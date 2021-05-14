@@ -66,7 +66,7 @@ namespace Produtos
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Protudo {c}\n");
                 Console.WriteLine("Digite o nome do produto...:");
-                nome[i2] = Console.ReadLine();
+                nome[i2] = Console.ReadLine().ToUpper();
                 Console.WriteLine("Digite o preço do produto...:");
                 preço[i2] = float.Parse(Console.ReadLine());
                 do
@@ -122,7 +122,7 @@ namespace Produtos
             {
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine($@"
-                {(i + 1)}º produto: {nome[i]}     {preço[i]}       {(promoção[i]? "sim" : "não")}");
+                {(i + 1)}º produto: {nome[i]}     R${preço[i]}      {(promoção[i]? "Sim!" : "Não!")}");
             }
             Mostrarmenu();
         }
